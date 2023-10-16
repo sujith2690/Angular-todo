@@ -1,0 +1,75 @@
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.inputPlace {
+    padding: 10px;
+    margin-right: 10px;
+    width: 500px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+}
+
+.btn {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: yellow;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    /* max-height: 300px;
+    min-height: 200px;
+    overflow: hidden;
+    overflow-y: scroll; */
+}
+.btn-clear{
+    background: red;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.todo-table th,
+.todo-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.msg {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.btnC,
+.btnD {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    margin-left: 5px;
+}
+
+.status {
+    color: green;
+}
+
+.table-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.todo-tablehead{
+    background: yellow;
+}

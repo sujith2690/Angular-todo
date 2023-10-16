@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>Angular Todo</h1>
+  <form class="input" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input class="inputPlace" name="title" id="title" type="text" ngModel placeholder="Your Todo Here...">
+    <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn-clear" (click)="clearTodos()">Clear All</button> <!-- Add this button -->
+  </form>
+
+  <div class="table-container">
+    <table class="todo-table" *ngIf="content.length > 0">
+      <thead>
+        <tr>
+          <th class="todo-tablehead" >Todo</th>
+          <th class="todo-tablehead" >Status</th>
+          <th class="todo-tablehead" >Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of content">
+          <td>{{ item.title }}</td>
+          <td>
+            <button class="btnC" (click)="onComplete(item.id)" *ngIf="!item.isComplete">OK</button>
+            <span class="status" *ngIf="item.isComplete">Completed</span>
+          </td>
+          <td><button class="btnD" (click)="onDelete(item.id)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="msg" *ngIf="content.length === 0">
+      Your Todo List is Empty!
+    </div>
+  </div>
+
+ 
+  <div class="table-container">
+    <table class="todo-table" *ngIf="content.length > 0">
+      <thead>
+        <tr>
+          <th class="todo-tablehead">Completed Todo</th>
+          <th class="todo-tablehead">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of content">
+          <td *ngIf="item.isComplete">{{ item.title }}</td>
+          <td *ngIf="item.isComplete"><button class="btnD" (click)="onDelete(item.id)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
